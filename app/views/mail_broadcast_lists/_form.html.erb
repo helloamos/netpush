@@ -1,0 +1,15 @@
+<%= form_for @mail_broadcast_list do |f| %>
+	<div class="form-group">
+		<%= f.text_field :name, class: "form-control", placeholder: "Nom de la liste" %>
+	</div>
+
+	<div class="form-group">
+		<%= f.text_area :description, class: "form-control", placeholder: "Description" %>
+	</div>
+	<div class="form-group">
+		<%= f.text_field :status, class: "form-control", placeholder: "Statut", value: "Actif" %>
+	</div>
+	<div class="form-group">
+		<%= f.submit "Créer", class: "btn btn-primary" %>
+	</div>
+<% end %>

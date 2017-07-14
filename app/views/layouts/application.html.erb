@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lacaisse-Tableau de bord</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="<%= controller_name %>">
+  <% if controller_name == "sessions" %>
+
+
+    <div class="container-fluid">
+      <%= yield %>
+      <%= render 'layouts/partials/footer' %>
+    </div>
+  <% elsif controller_name == "registrations" %>
+        <%= render 'layouts/partials/header' %>
+        <div class="container-fluid">
+          <div class="panel panel-default">
+            <div class="panel-heading">Inscription</div>
+            <div class="panel-body">
+              <%= yield %>
+            </div>
+          </div>
+
+          <%= render 'layouts/partials/footer' %>
+        </div>
+
+    <% else %>
+
+<!-- Left Sidebar -->
+      <%= render('layouts/partials/header') %>
+       <!-- End Left sidebar -->
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="containerd">
+        <%= yield %>
+      </div><!-- /.container -->
+
+      <!-- Main Footer -->
+      <%= render('layouts/partials/footer') %>
+       <!-- End Main Footer -->
+    <% end %>
+</body>
+</html>

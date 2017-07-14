@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tableau de bord</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="skin-blue sidebar-mini">
+
+	
+			
+
+
+    <div class="container-fluid">
+
+    	<!-- Left Sidebar -->
+      <%= render('layouts/partials/dnavbar') %>
+       <!-- End Left sidebar -->
+
+
+      <!-- Left Sidebar -->
+      <%= render('layouts/partials/dsidebar') %>
+       <!-- End Left sidebar -->
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper" style="min-height: 654px;">
+        <%= yield %>
+      </div><!-- /.content-wrapper -->
+
+      <!-- Main Footer -->
+      <%= render('layouts/partials/dfooter') %>
+       <!-- End Main Footer -->
+
+
+    </div><!-- ./wrapper -->
+
+    
+
+</body>
+</html>

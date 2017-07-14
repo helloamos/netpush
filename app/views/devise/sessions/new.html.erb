@@ -1,0 +1,49 @@
+
+<div class="container">
+	<div class="signin_logo">
+		<%= image_tag('logo/logo') %>
+	</div>
+	<div class="col-md-4"></div>
+
+	<div class="col-md-4">
+		<div class="signin">
+			<div class="panel panel-default">
+			<h2>Connexion</h2>
+
+			<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+				<div class="form-group">
+					
+					<%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Adresse e-mail" %>
+				</div>
+
+				<div class="form-group">
+					
+					<%= f.password_field :password, autocomplete: "off", class: "form-control" , placeholder: "Mot de passe" %>
+				</div>
+
+				<% if devise_mapping.rememberable? -%>
+					<div class="form-group">
+						<%= f.check_box :remember_me %>
+						<%= f.label "Garder ma session active" %>
+					</div>
+				<% end -%>
+
+				<div class="form-group">
+					<%= f.submit "Se connecter", class: "btn btn-success" %>
+				</div>
+			<% end %>
+
+			<%= render "devise/shared/forgotpassword" %>
+			</div>
+		</div><!-- end sigin -->
+		<div class="bottom_signup">
+			<div class="panel panel-default">
+			Vous n'avez pas de compte ?
+			<%= render "devise/shared/signup" %>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-md-4">
+	</div>
+</div>
