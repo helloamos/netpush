@@ -4,8 +4,10 @@ Rails.application.routes.draw do
     
     root "dashboard#index"
     get "dashboard" => "dashboard#index"
-    get "dashboard/mail-broadcast-list" => "mail_broadcast_lists#index", as: :mail_broadcast_list
-    get "dashboard/phone-broadcast-list" => "phone_broadcast_lists#index", as: :phone_broadcast_list
+    get "dashboard/mail-broadcast-lists" => "mail_broadcast_lists#index", as: :mail_broadcast_list
+    get "dashboard/phone-broadcast-lists" => "phone_broadcast_lists#index", as: :phone_broadcast_list
+    get "dashboard/mail-lists" => "mail_lists#index", as: :mail_list
+    get "dashboard/phone-lists" => "phone_lists#index", as: :phone_list
     devise_for :users, path: 'auth', path_names: { 
       sign_in: 'login', 
       sign_out: 'logout', 
@@ -21,6 +23,14 @@ Rails.application.routes.draw do
     end
 
     resources :phone_broadcast_lists do
+      get 'delete'
+    end
+
+    resources :mail_lists do
+      get 'delete'
+    end
+
+    resources :phone_lists do
       get 'delete'
     end
 

@@ -1,5 +1,5 @@
 class MailBroadcastListsController < ApplicationController
-	before_action :set_operation, only: [:show, :edit, :update, :destroy]
+	before_action :set_mail_broadcast_list, only: [:show, :edit, :update, :destroy]
 	layout("dash")
 
 	def index

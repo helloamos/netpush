@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   # Relationship
   has_many :mail_broadcast_lists
+  has_many :phone_broadcast_lists
+  has_many :mail_lists
 end
