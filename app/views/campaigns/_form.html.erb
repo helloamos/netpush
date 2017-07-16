@@ -1,0 +1,24 @@
+<%= form_for @campaign do |f| %>
+	<div class="form-group">
+		<%= f.text_field :campaign_name, class: "form-control", placeholder: "Nom" %>
+	</div>
+
+	<div class="form-group">
+		<%= f.text_field :campaign_type, class: "form-control", placeholder: "Type" %>
+	</div>
+	<div class="form-group">
+		<%= f.text_field :sender, class: "form-control", placeholder: "Expéditeur" %>
+	</div>
+	<div class="form-group">
+		<%= f.text_field :recipient, class: "form-control", placeholder: "Destinateur" %>
+	</div>
+	<div class="form-group">
+		<%= f.text_field :object, class: "form-control", placeholder: "Objet" %>
+	</div>
+	<div class="form-group">
+		<%= f.text_area :content, class: "form-control", placeholder: "Message" %>
+	</div>
+	<div class="form-group">
+		<%= f.submit "Créer", class: "btn btn-primary" %>
+	</div>
+<% end %>

@@ -1,16 +1,17 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
          <div class="pull-left">
-             GESTION DES LISTES DE DIFFUSION 
+             CRÉATION / GESTION DE CAMPAGNES 
          </div> 
            
             <div class="pull-right">
-              <%= link_to "Créer une liste de diffusion",  new_phone_broadcast_list_path , class: "btn btn-primary" %>
+              <%= link_to "Créer une campagnes",  new_campaign_path , class: "btn btn-primary" %>
             </div>
           
 
 
 </section>
+
 <!-- Main content -->
 <section class="content">
 
@@ -27,7 +28,7 @@
             <!-- TABLE: LATEST ORDERS -->
             <div class="box box-info">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Vos listes de diffusion</h3>
+                    <h3 class="box-title">Liste de vos campagnes</h3>
 
                 <div class="box-tools pull-right">
                     <!-- Right content here -->
@@ -36,7 +37,24 @@
 
           <div class="box-body">
              <!-- Content here -->
-             <%= render "form" %>
+             <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      
+                      <th>Nom</th>
+                      <th>Type</th>
+                      <th>Statut</th>
+                      <th>Expéditeur</th>
+                     
+                      
+                      <th style="width: 60px"></th>
+                      
+                    </tr>
+                  </thead>
+                  <tbody class="client-index">
+                    <%= render('index') %>
+                  </tbody>
+              </table>
           </div>
 
           <!--<div class="box-footer hidden-xs hidden-sm">
@@ -53,4 +71,3 @@
      
     
 </section><!-- /.content -->
-

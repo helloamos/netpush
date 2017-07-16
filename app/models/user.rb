@@ -7,4 +7,6 @@ class User < ApplicationRecord
   has_many :mail_broadcast_lists
   has_many :phone_broadcast_lists
   has_many :mail_lists
+  has_many :phone_lists
+  has_many :campaigns
 end

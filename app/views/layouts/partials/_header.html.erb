@@ -19,21 +19,31 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-         <li><a href="#">Tableau de bord</a></li>
-        <li>
-          <ul>
-          <a href="#">Mes campagnes</a>
+         
+        <li class="dropdown">
+          <ul class="dropdown-menu">
+          
+          <li> <%= link_to "Campagnes", campaigns_path %></li>
           </ul>
         </li>
-
-        <li>Mes contacts
-          <ul>
-          <li> <%= link_to "Liste des e-mail diffusion", mail_broadcast_list_path %></li>
-          <li> <%= link_to "Liste des numeros de diffusion", phone_broadcast_list_path %></li>
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Listes de diffusion<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li> <%= link_to "Liste des e-mail diffusion", mail_broadcast_list_path %></li>
+              <li> <%= link_to "Liste des numeros de diffusion", phone_broadcast_list_path %></li>
           </ul>
           
         </li>
-        <li><a href="#">Mes templates</a></li>
+
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contacts<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+          <li> <%= link_to "Contacts téléphonique", phone_list_path %></li>
+          <li> <%= link_to "Adresses e-mail", mail_list_path %></li>
+          </ul>
+          
+        </li>
+        <li><a href="#">Templates</a></li>
         <li><a href="#">Reglages</a></li>
         
       </ul>

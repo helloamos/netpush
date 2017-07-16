@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     get "dashboard/phone-broadcast-lists" => "phone_broadcast_lists#index", as: :phone_broadcast_list
     get "dashboard/mail-lists" => "mail_lists#index", as: :mail_list
     get "dashboard/phone-lists" => "phone_lists#index", as: :phone_list
+    get "dashboard/campaigns" => "campaigns#index", as: :campaigns
+
     devise_for :users, path: 'auth', path_names: { 
       sign_in: 'login', 
       sign_out: 'logout', 
@@ -31,6 +33,10 @@ Rails.application.routes.draw do
     end
 
     resources :phone_lists do
+      get 'delete'
+    end
+
+    resources :campaigns do
       get 'delete'
     end
 

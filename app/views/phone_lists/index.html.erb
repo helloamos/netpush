@@ -5,12 +5,13 @@
          </div> 
            
             <div class="pull-right">
-              <%= link_to "Créer une liste de diffusion",  new_phone_broadcast_list_path , class: "btn btn-primary" %>
+              <%= link_to "Ajouter un numéro",  new_phone_list_path , class: "btn btn-primary" %>
             </div>
           
 
 
 </section>
+
 <!-- Main content -->
 <section class="content">
 
@@ -36,7 +37,24 @@
 
           <div class="box-body">
              <!-- Content here -->
-             <%= render "form" %>
+             <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      
+                      <th>Nom</th>
+                      <th>Téléphone</th>
+                      <th>Ville</th>
+                      <th>Pays</th>
+                      <th>E-mail</th>
+                      
+                      <th style="width: 60px"></th>
+                      
+                    </tr>
+                  </thead>
+                  <tbody class="client-index">
+                    <%= render('index') %>
+                  </tbody>
+              </table>
           </div>
 
           <!--<div class="box-footer hidden-xs hidden-sm">
@@ -53,4 +71,3 @@
      
     
 </section><!-- /.content -->
-
