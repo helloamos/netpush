@@ -52,6 +52,14 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
+
+  # Deployement
+  gem 'capistrano', '~> 3.6'
+  gem 'capistrano-rails', '~> 1.1'
+  #gem 'capistrano-rvm', '~> 0.1.2'
+  gem 'capistrano-rbenv' #, github: "capistrano/rbenv"
+  gem 'capistrano3-puma' #, github: "seuros/capistrano-puma"
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
