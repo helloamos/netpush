@@ -2,7 +2,7 @@
 lock "3.9.0"
 
 set :application, "Netpush"
-set :repo_url, "git@example.com:me/my_repo.git"
+set :repo_url, "https://github.com/helloamos/netpush"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
