@@ -32,8 +32,8 @@ development:
   database: netpush_development
   pool: 5
   host:     localhost
-  username: postgres
-  password: root
+  username: netpush_admin
+  password: root2017
 
 test:
   adapter: postgresql
@@ -41,8 +41,8 @@ test:
   database: netpush_test
   pool: 5
   host:     localhost
-  username: postgres
-  password: root
+  username: netpush_admin
+  password: root2017
 
 production:
   adapter: postgresql
@@ -50,5 +50,5 @@ production:
   database: netpush_production
   pool: 5
   host:     localhost
-  username: postgres
-  password: root
+  username: netpush_admin
+  password: root2017

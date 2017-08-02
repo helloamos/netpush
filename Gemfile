@@ -54,11 +54,11 @@ group :development do
   gem 'web-console', '>= 3.3.0'
 
   # Deployement
-  gem 'capistrano', '~> 3.6'
-  gem 'capistrano-rails', '~> 1.1'
+  #gem 'capistrano', '~> 3.6'
+  #gem 'capistrano-rails', '~> 1.1'
   #gem 'capistrano-rvm', '~> 0.1.2'
-  gem 'capistrano-rbenv' #, github: "capistrano/rbenv"
-  gem 'capistrano3-puma' #, github: "seuros/capistrano-puma"
+  #gem 'capistrano-rbenv' #, github: "capistrano/rbenv"
+  #gem 'capistrano3-puma' #, github: "seuros/capistrano-puma"
 
 end
 

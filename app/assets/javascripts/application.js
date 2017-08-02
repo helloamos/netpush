@@ -27,9 +27,8 @@ $(function () {
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
-$(document).on 'ready page:load', ->
-    CountryStateSelect({ country_id: "country_field_id", state_id: "state_field_id" })
 
-     $(document).ready(function(){
-        $('.dropdown-toggle').dropdown();
-    });
+//$(document).on 'ready page:load', -> 
+//CountryStateSelect({ country_id: "country_field_id", state_id: "state_field_id" })
+
+$(document).ready(function(){ $('.dropdown-toggle').dropdown();})
