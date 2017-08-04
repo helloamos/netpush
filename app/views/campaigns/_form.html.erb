@@ -4,13 +4,13 @@
 	</div>
 
 	<div class="form-group">
-		<%= f.text_field :campaign_type, class: "form-control", placeholder: "Type" %>
+		<%= f.select :campaign_type, Campaign::CAMPAIGNS_TYPE,  {prompt: "Type de campagne"}, class: "form-control" %>
 	</div>
 	<div class="form-group">
 		<%= f.text_field :sender, class: "form-control", placeholder: "Expéditeur" %>
 	</div>
 	<div class="form-group">
-		<%= f.text_field :recipient, class: "form-control", placeholder: "Destinateur" %>
+		<%= f.select :recipient, class: "form-control", placeholder: "Destinateur" %>
 	</div>
 	<div class="form-group">
 		<%= f.text_field :object, class: "form-control", placeholder: "Objet" %>

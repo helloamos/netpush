@@ -10,23 +10,22 @@
      
      
 		<td>
-			<ul>
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">GERER
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        
+        <li>
+            <%= link_to raw('<i class="fa fa-pencil-square-o" aria-hidden="true"> Modifier</i>'),edit_phone_list_path(pl), remote: true , "data-toggle"=>"tooltip", "data-placement"=>"top", title:"Modifier"%>
+        <li>
 
-      			<li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">GERER<span class="caret"></span></a>
-          <ul class="dropdown-menu">
           <li>
-          	<%= link_to raw('<i class="fa fa-pencil-square-o" aria-hidden="true"> Modifier</i>'),edit_phone_list_path(pl), remote: true , "data-toggle"=>"tooltip", "data-placement"=>"top", title:"Modifier"%>
-</li>
-            <li>
             <%= link_to raw('<i class="fa fa-trash-o" aria-hidden="true"> Supprimer</i>'), phone_list_delete_path(pl),:remote => true, class: "red-text" , "data-toggle"=>"tooltip", "data-placement"=>"top", title:"Supprimer"%>
             </li>
-
-           
-           
-          </ul>
-        </li>
-        </ul>
-	</td>
+          
+        
+      </ul>
+    </div>
+  </td>
     </tr>
 <% end %>
